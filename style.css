@@ -1,0 +1,61 @@
+@charset "UTF - 8";
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+:root{
+    --principal:#E85D04;
+    --secundaria:#F48C06;
+    --fundo:#FFF7ED;
+    --fundo-secundario:#FFE8CC;
+    --texto:#2B2B2B;
+    --texto-secundario:#6B6B6B;
+    --texto-terciario: #FFF3E0;
+    --links: #FFE5D9;
+    --contraste:#6A994E;
+    --contraste-secundario:#370617;
+    --alerta:#D62828;
+}
+header#saudacoes{
+    height: 200px;
+    width: 100vw;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.597),
+            rgba(0, 0, 0, 0.597) ),
+        url('imagens/saudacao-background.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+header h1{
+    color: var(--texto-terciario);
+    font-size: 2.3em;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
+    padding-top: 50px;
+}
+header p{
+    padding-top: 10px;
+    text-align: center;
+    color: var(--texto-terciario);
+}
+header nav{
+  margin-top: 50px;
+  text-align: center;
+}
+header nav a{
+    color: var(--links);
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    padding: 5px;
+    font-size: 0.95em;
+}
+header nav a:hover{
+    font-size: 1.2em;
+}
