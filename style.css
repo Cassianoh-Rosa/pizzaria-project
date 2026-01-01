@@ -8,9 +8,9 @@ font-family:Arial, Helvetica, sans-serif;
 }
 :root{
     --principal:#E85D04;
-    --secundaria:#F48C06;
-    --fundo:#FFF7ED;
-    --fundo-secundario:#FFE8CC;
+    --secundaria:hsl(24, 95%, 49%);
+    --fundo:#f6ebdf;
+    --fundo-secundario:#f9d1a0;
     --texto:#2B2B2B;
     --texto-secundario:#6B6B6B;
     --texto-terciario: #FFF3E0;
@@ -29,6 +29,7 @@ header#saudacoes{
         url('imagens/saudacao-background.jpg');
     background-position: center center;
     background-size: cover;
+    margin-bottom: 30px;
 }
 
 header h1{
@@ -58,4 +59,37 @@ header nav a{
 }
 header nav a:hover{
     font-size: 1.2em;
+}
+main{
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+}
+section#cardapio{
+    background-color: var(--fundo);
+    padding: 15px;
+    grid-column: 2/3;
+    border-radius: 8px;
+}
+section#cardapio h2{
+    margin-bottom: 15px;
+    color: #E85D04;
+}
+div.pizza{
+    background-color: var(--fundo-secundario);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;;
+    gap: 10%;
+    margin-bottom: 20px;
+}
+div.pizza img{
+    width: 200px;
+    align-self: center;
+}
+div.pizza h3{
+    color: var(--secundaria);
+}
+div.pizza p{
+    color: var(--texto);
 }
