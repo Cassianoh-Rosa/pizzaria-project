@@ -114,6 +114,7 @@ section#sobre-nos{
     background-color: var(--fundo);
     padding: 20px;
     border-radius: 8px;
+    margin-bottom: 40px;
 }
 section#sobre-nos h2{
     color: var(--principal);
@@ -143,4 +144,9 @@ section#sobre-nos article{
     margin-bottom: 8px;
     color: var(black);
     text-align: justify;
+}
+section#encomendar{
+    grid-column: 2/3;
+    background-color: var(--fundo);
+    padding: 20px;
 }
