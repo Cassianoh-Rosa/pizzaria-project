@@ -8,61 +8,51 @@
     <script src="https://kit.fontawesome.com/385888c5f9.js" crossorigin="anonymous"></script>
     <title>Coca Pizzas</title>
 </head>
+
 <body>
+
     <!-- ------------ HEADER ------------------------- -->
     <header id="saudacoes">
         <h1>Coca Pizzas</h1>
         <p>Pizza artesanal feita com paixão</p>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Cardápio</a>
-            <a href="#">Sobre nós</a>
-            <a href="#">Encomendar</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre-nos">Sobre nós</a>
+            <a href="#encomendar">Encomendar</a>
         </nav>
     </header>
-    <!-- -----------------CARDÁPIO--------------------- -->
+
+    <!-- ------------ MAIN --------------------------- -->
     <main>
+
+        <!-- ------------ CARDÁPIO -------------------- -->
         <section id="cardapio">
-              <h2>Cardápio <i class="fa-solid fa-pizza-slice"></i>
-            </h2>
+            <h2>Cardápio <i class="fa-solid fa-pizza-slice"></i></h2>
+
             <div class="pizza">
-                <img src="imagens/pizza-strogonoff-carne.png" alt="pizza de strogonoff">
+                <img src="imagens/pizza-strogonoff-carne.png" alt="Pizza de strogonoff de carne">
                 <div class="info">
                     <h3>Strogonoff de carne</h3>
-                    <p>
-                        <strong>Ingredientes:</strong> queijo, carne de gado,temperos da casa, batata palha, molho da casa, cebola
-                    </p> <br>
-                    <p class="preco">
-                        <em>preço: 45R$</em>
-                    </p>
+                    <p><strong>Ingredientes:</strong> queijo, carne de gado, temperos da casa, batata palha, molho da casa, cebola</p>
+                    <p class="preco">Preço: R$45</p>
                 </div>
             </div>
 
             <div class="pizza">
-                <img src="imagens/calabresa.png" alt="pizza de strogonoff">
+                <img src="imagens/calabresa.png" alt="Pizza de pepperoni">
                 <div class="info">
                     <h3>Pepperoni</h3>
-                    <p>
-                        <strong>Ingredientes:</strong> Pepperoni, queijo, cebola, pedaços de azeitona, molho de pimenta
-                    </p>
-                    <br>
-                    <p class="preco">
-                        preço: 40R$
-                    </p>
+                    <p><strong>Ingredientes:</strong> pepperoni, queijo, cebola, azeitona, molho de pimenta</p>
+                    <p class="preco">Preço: R$40</p>
                 </div>
             </div>
 
-             <div class="pizza">
-                <img src="imagens/strogonoff-frango.png" alt="pizza de strogonoff de frango">
+            <div class="pizza">
+                <img src="imagens/strogonoff-frango.png" alt="Pizza de strogonoff de frango">
                 <div class="info">
-                    <h3>Strogonoff de Frango</h3>
-                    <p>
-                        <strong>Ingredientes:</strong> Pepperoni, queijo, cebola, pedaços de azeitona, molho de pimenta
-                    </p>
-                    <br>
-                    <p class="preco">
-                        preço: 45R$
-                    </p>
+                    <h3>Strogonoff de frango</h3>
+                    <p><strong>Ingredientes:</strong> frango, queijo, temperos da casa, batata palha</p>
+                    <p class="preco">Preço: R$45</p>
                 </div>
             </div>
 
@@ -70,74 +60,51 @@
                 <img src="imagens/chocolate.png" alt="Pizza de chocolate">
                 <div class="info">
                     <h3>Chocolate</h3>
-                    <p>
-                        <strong>Ingredientes:</strong> Pepperoni, queijo, cebola, pedaços de azeitona, molho de pimenta
-                    </p>
-                     <br>
-                    <p class="preco">
-                        preço: 55R$
-                    </p>
+                    <p><strong>Ingredientes:</strong> chocolate, creme especial</p>
+                    <p class="preco">Preço: R$55</p>
                 </div>
             </div>
         </section>
 
-        <section id="sobre-nos">
-            <h2>Sobre Nós</h2>
-            
-             <article>
-                <div id="foto">
-                    <img src="imagens/pizza-prato.jpg" alt="Foto de uma pizza de nosso restaurante">
-                </div>
-                 <div id="texto">
-                     <p>A Coca Pizzas nasceu da paixão por pizza de verdade. Daquelas feitas com calma, massa bem trabalhada e ingredientes escolhidos com cuidado. Nosso objetivo sempre foi simples: entregar uma pizza saborosa, honesta e feita como se fosse para a nossa própria família.</p>
-                 
-                    <p>Trabalhamos com receitas artesanais, combinando sabores clássicos com opções especiais da casa. Cada pizza é preparada na hora, com atenção aos detalhes, desde a massa até o último ingrediente colocado.</p>
-                 
-                    <p>Mais do que vender pizza, queremos criar uma boa experiência. Seja para um jantar em família, um encontro com amigos ou aquele momento de conforto depois de um dia cansativo, a Coca Pizzas está aqui para fazer parte desses momentos.</p>
-                 </div>
-             </article>
-            </section>
-
+        <!-- ------------ ENCOMENDAR ------------------ -->
             <section id="encomendar">
                 <h2>Encomendar</h2>
-                <form action="cadastro.js" method="get" id="form">
-                    <fieldset class="dados">
-                        <legend class="legend">Seus dados</legend>
+                <form action="#" method="get" id="form">
+                    <fieldset id="dados">
+                        <legend>Seus dados</legend>
                         <div class="form-div">
                             <label for="inome">Nome:</label> <br>
-                            <input type="text" name="nome" id="inome" placeholder="Seu nome" required autocomplete="name">
+                            <input type="text" id="inome" name="nome" required autocomplete="name">
                         </div>
                         <div class="form-div">
                             <label for="inumero">Número:</label> <br>
-                            <input type="number" name="numero" id="inumero" placeholder=" 00 00000-0000" required autocomplete="cc-number" maxlength="11">
+                            <input type="number" name="numero" id="inumero">
                         </div>
                         <div class="form-div">
                             <label for="iendereco">Endereço:</label> <br>
-                            <input type="text" name="endereco" id="iendereco" placeholder="Bairro/rua/número" required autocomplete="address-level1">
+                            <input type="text" id="iendereco" name="endereco" required autocomplete="street-address">
                         </div>
                     </fieldset>
-                    <fieldset class="pizzas">
-                        <legend class="legend">Pizzas</legend>
+                    <fieldset id="pizzas">
+                        <legend>Pizzas</legend>
                         <div class="form-div">
-                            <input type="checkbox" name="carne" id="icarne">
-                            <label for="icarne"> Strogonoff de Carne</label>
+                            <input type="checkbox" id="icarne">
+                            <label for="icarne">Strogonoff de carne</label>
                         </div>
                         <div class="form-div">
-                            <input type="checkbox" name="frango" id="ifrango">
+                            <input type="checkbox" id="ifrango">
                             <label for="ifrango">Strogonoff de frango</label>
                         </div>
                         <div class="form-div">
-                            <input type="checkbox" name="pepperoni" id="ipepperoni">
+                            <input type="checkbox" id="ipepperoni">
                             <label for="ipepperoni">Pepperoni</label>
                         </div>
-                        <di class="form-div">
-                            <input type="checkbox" name="chocolate" id="ichocolate">
+                        <div class="form-div">
+                            <input type="checkbox" id="ichocolate">
                             <label for="ichocolate">Chocolate</label>
                         </div>
-                        <div>
-                            <p>
-                                Total: <span>0</span>R$
-                            </p>
+                        <div id="total">
+                            <p>Total: <span>0</span> R$</p>
                         </div>
                     </fieldset>
                     <div id="mandar-resetar">
@@ -146,7 +113,24 @@
                     </div>
                 </form>
             </section>
+
     </main>
+    <!-- ------------ SOBRE NÓS ------------------- -->
+            <section id="sobre-nos">
+                <h2>Sobre Nós <i class="fa-regular fa-hand-peace"></i></h2>
+                <article>
+                    <div id="foto">
+                        <img src="imagens/pizza-prato.jpg" alt="Foto de uma pizza do restaurante">
+                    </div>
+                    <div id="texto">
+                        <p> Coca Pizzas nasceu da paixão por pizza de verdade. Daquelas feitas com calma, massa bem trabalhada e ingredientes escolhidos com cuidado. Nosso objetivo sempre foi simples: entregar uma pizza saborosa, honesta e feita como se fosse para a nossa própria família.</p>
+                        <p>Acreditamos que uma boa pizza vai muito além de matar a fome. Por isso, nosso objetivo sempre foi simples e honesto: entregar uma pizza saborosa, feita com atenção aos detalhes, como se fosse preparada para a nossa própria família. Nada de atalhos, nada de pressa, apenas dedicação e amor pelo que fazemos.</p>
+                        <p>Mais do que vender pizza, queremos criar uma boa experiência. Seja para um jantar em família, um encontro com amigos ou aquele momento de conforto depois de um dia cansativo, a Coca Pizzas está aqui para fazer parte desses momentos.</p>
+                        </div>
+                </article>
+            </section>
+        </div>
+
     <script src="script/script.js"></script>
 </body>
 </html>

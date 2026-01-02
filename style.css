@@ -1,4 +1,4 @@
-@charset "UTF - 8";
+@charset "UTF-8";
 
 *{
 padding: 0;
@@ -23,7 +23,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 header#saudacoes{
     height: 200px;
-    width: 100vw;
+    width: 100%;
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.597),
@@ -110,11 +110,11 @@ div.pizza .preco{
     font-weight: bold;
 }
 section#sobre-nos{
-    grid-column: 2/3;
+   width: 92%;
+   margin: auto;
     background-color: var(--fundo);
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 40px;
 }
 section#sobre-nos h2{
     color: var(--principal);
@@ -146,16 +146,15 @@ section#sobre-nos article{
     text-align: justify;
 }
 section#encomendar{
-    grid-column: 2/3;
     background-color: var(--fundo);
+    grid-column: 2/3;
+    margin-bottom:30px ;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     border-radius: 8px;
 }
 section#encomendar h2{
     color: var(--principal);
+    font-size: 1.7em;
 }
 section#encomendar form{
     background-color: var(--fundo-secundario);
@@ -172,11 +171,28 @@ form fieldset{
     flex-direction: column;
     gap: 8px;
 }
-fieldset input
+form fieldset legend{
+    font-size: 1.3em;
+    color: var(--principal);
+    font-weight: bold;
+}
+form label{
+    font-size: 1.1em;
+}
+form > fieldset > div > input[type="text"], input[type="number"] {
+  border: 2px solid var(--secundaria);
+  height: 30px;
+  border-radius: 4px;
+}
+form > #dados{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 div#mandar-resetar{
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: row;
+    gap: 45px;
 }
 div#mandar-resetar input{
     padding: 8px;
@@ -190,8 +206,47 @@ div#mandar-resetar input{
 div#mandar-resetar input:hover{
     background-color: var(--secundaria);
 }
-@media screen and (min-width:328px){
-    header nav{
-        margin-top: 50px;
-    }
+fieldset#pizzas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div#total p{
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--contraste);
+    font-weight: bold;
+}
+   @media screen and (min-width:768px) {
+        main{
+            grid-template-columns: auto 60% 30% auto;
+            grid-template-rows: auto auto;
+            gap: 30px;
+        }
+        section#cardapio{
+            grid-column: 2/3;
+            grid-row: 1/2;;
+            margin-bottom: 0;
+        }
+        section#encomendar{
+            grid-column:3/4;
+            grid-row:1/2;
+            height: 680px;
+            position: sticky;
+            top: 8px;
+            z-index: 1;
+        }
+        section#sobre-nos{
+            margin-bottom: 20px;
+        }
+        section#sobre-nos article{
+            flex-direction: row;
+        }
+        section#sobre-nos div#texto{
+            flex: 1 1 40%;
+        }
+        section#sobre-nos div#foto{
+            align-self: center;
+            flex: 1 1 50%;
+        }
 }

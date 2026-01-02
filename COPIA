@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/385888c5f9.js" crossorigin="anonymous"></script>
+    <title>Coca Pizzas</title>
+</head>
+
+<body>
+
+    <!-- ------------ HEADER ------------------------- -->
+    <header id="saudacoes">
+        <h1>Coca Pizzas</h1>
+        <p>Pizza artesanal feita com paixão</p>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre-nos">Sobre nós</a>
+            <a href="#encomendar">Encomendar</a>
+        </nav>
+    </header>
+
+    <!-- ------------ MAIN --------------------------- -->
+    <main>
+
+        <!-- ------------ CARDÁPIO -------------------- -->
+        <section id="cardapio">
+            <h2>Cardápio <i class="fa-solid fa-pizza-slice"></i></h2>
+
+            <div class="pizza">
+                <img src="imagens/pizza-strogonoff-carne.png" alt="Pizza de strogonoff de carne">
+                <div class="info">
+                    <h3>Strogonoff de carne</h3>
+                    <p><strong>Ingredientes:</strong> queijo, carne de gado, temperos da casa, batata palha, molho da casa, cebola</p>
+                    <p class="preco">Preço: R$45</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="imagens/calabresa.png" alt="Pizza de pepperoni">
+                <div class="info">
+                    <h3>Pepperoni</h3>
+                    <p><strong>Ingredientes:</strong> pepperoni, queijo, cebola, azeitona, molho de pimenta</p>
+                    <p class="preco">Preço: R$40</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="imagens/strogonoff-frango.png" alt="Pizza de strogonoff de frango">
+                <div class="info">
+                    <h3>Strogonoff de frango</h3>
+                    <p><strong>Ingredientes:</strong> frango, queijo, temperos da casa, batata palha</p>
+                    <p class="preco">Preço: R$45</p>
+                </div>
+            </div>
+
+            <div class="pizza">
+                <img src="imagens/chocolate.png" alt="Pizza de chocolate">
+                <div class="info">
+                    <h3>Chocolate</h3>
+                    <p><strong>Ingredientes:</strong> chocolate, creme especial</p>
+                    <p class="preco">Preço: R$55</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------ ENCOMENDAR ------------------ -->
+            <section id="encomendar">
+                <h2>Encomendar</h2>
+                <form action="#" method="get" id="form">
+                    <fieldset id="dados">
+                        <legend>Seus dados</legend>
+                        <div class="form-div">
+                            <label for="inome">Nome:</label> <br>
+                            <input type="text" id="inome" name="nome" required autocomplete="name">
+                        </div>
+                        <div class="form-div">
+                            <label for="inumero">Número:</label> <br>
+                            <input type="number" name="numero" id="inumero">
+                        </div>
+                        <div class="form-div">
+                            <label for="iendereco">Endereço:</label> <br>
+                            <input type="text" id="iendereco" name="endereco" required autocomplete="street-address">
+                        </div>
+                    </fieldset>
+                    <fieldset id="pizzas">
+                        <legend>Pizzas</legend>
+                        <div class="form-div">
+                            <input type="checkbox" id="icarne">
+                            <label for="icarne">Strogonoff de carne</label>
+                        </div>
+                        <div class="form-div">
+                            <input type="checkbox" id="ifrango">
+                            <label for="ifrango">Strogonoff de frango</label>
+                        </div>
+                        <div class="form-div">
+                            <input type="checkbox" id="ipepperoni">
+                            <label for="ipepperoni">Pepperoni</label>
+                        </div>
+                        <div class="form-div">
+                            <input type="checkbox" id="ichocolate">
+                            <label for="ichocolate">Chocolate</label>
+                        </div>
+                        <div id="total">
+                            <p>Total: <span>0</span> R$</p>
+                        </div>
+                    </fieldset>
+                    <div id="mandar-resetar">
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Pedir">
+                    </div>
+                </form>
+            </section>
+
+        <!-- ------------ SOBRE NÓS ------------------- -->
+        <section id="sobre-nos">
+            <h2>Sobre Nós <i class="fa-regular fa-hand-peace"></i></h2>
+
+            <article>
+                <div id="foto">
+                    <img src="imagens/pizza-prato.jpg" alt="Foto de uma pizza do restaurante">
+                </div>
+
+                <div id="texto">
+                    <p> Coca Pizzas nasceu da paixão por pizza de verdade. Daquelas feitas com calma, massa bem trabalhada e ingredientes escolhidos com cuidado. Nosso objetivo sempre foi simples: entregar uma pizza saborosa, honesta e feita como se fosse para a nossa própria família.</p>
+
+                    <p>Acreditamos que uma boa pizza vai muito além de matar a fome. Por isso, nosso objetivo sempre foi simples e honesto: entregar uma pizza saborosa, feita com atenção aos detalhes, como se fosse preparada para a nossa própria família. Nada de atalhos, nada de pressa, apenas dedicação e amor pelo que fazemos.</p>
+                    <p>Mais do que vender pizza, queremos criar uma boa experiência. Seja para um jantar em família, um encontro com amigos ou aquele momento de conforto depois de um dia cansativo, a Coca Pizzas está aqui para fazer parte desses momentos.</p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
+
+@charset "UTF - 8";
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+:root{
+    --principal:#E85D04;
+    --secundaria:#f88335;
+    --fundo:#ffe3c5;
+    --fundo-secundario:#f7cd99;
+    --texto:#2B2B2B;
+    --texto-secundario:#6B6B6B;
+    --texto-terciario: #FFF3E0;
+    --links: #FFE5D9;
+    --contraste:#6A994E;
+    --contraste-secundario:#3d091b;
+    --alerta:#D62828;
+    --black:black;
+    --white:white;
+}
+header#saudacoes{
+    height: 200px;
+    width: 100%;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.597),
+            rgba(0, 0, 0, 0.597) ),
+        url('imagens/saudacao-background.jpg');
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+header h1{
+    color: var(--texto-terciario);
+    font-size: 2.3em;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
+    padding-top: 50px;
+}
+header p{
+    padding-top: 10px;
+    text-align: center;
+    color: var(--texto-terciario);
+}
+header nav{
+  margin-top: 40px;
+  text-align: center;
+}
+header nav a{
+    color: var(--links);
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    padding: 5px;
+    font-size: 0.95em;
+}
+header nav a:hover{
+    font-size: 1.2em;
+}
+main{
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+}
+section#cardapio{
+    background-color: var(--fundo);
+    padding: 15px;
+    grid-column: 2/3;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+section#cardapio h2{
+    margin-bottom: 15px;
+    color: #E85D04;
+    font-size: 1.7em;
+}
+div.pizza{
+    background-color: var(--fundo-secundario);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 15px;
+    transition-duration: 0.5s;
+    border-left: 8px solid var(--secundaria);
+}
+div.pizza:hover{
+    border-left: 25px solid var(--principal)
+}
+div.pizza img{
+    width: 200px;
+    align-self: center;
+}
+div.pizza h3{
+    color: var(--principal);
+   margin-bottom: 15px;
+   font-size: 1.4em;
+}
+div.pizza p{
+    color: var(--texto);
+}
+div.pizza .preco{
+    color: var(--contraste);
+    font-style: italic;
+    font-weight: bold;
+}
+section#sobre-nos{
+    grid-column: 2/3;
+    background-color: var(--fundo);
+    padding: 20px;
+    border-radius: 8px;
+}
+section#sobre-nos h2{
+    color: var(--principal);
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+section#sobre-nos article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#sobre-nos div#foto{
+    width: 100%;
+}
+#sobre-nos div#foto img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+#sobre-nos div#texto{
+    background-color: var(--fundo-secundario);
+    padding: 15px;
+    border-radius: 8px;
+}
+#sobre-nos div#texto p{
+    margin-bottom: 8px;
+    color: var(black);
+    text-align: justify;
+}
+section#encomendar{
+    background-color: var(--fundo);
+    grid-column: 2/3;
+    margin-bottom:30px ;
+    padding: 20px;
+    border-radius: 8px;
+}
+section#encomendar h2{
+    color: var(--principal);
+    font-size: 1.7em;
+}
+section#encomendar form{
+    background-color: var(--fundo-secundario);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+form fieldset{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+form fieldset legend{
+    font-size: 1.3em;
+    color: var(--principal);
+    font-weight: bold;
+}
+form label{
+    font-size: 1.1em;
+}
+form > fieldset > div > input[type="text"], input[type="number"] {
+  border: 2px solid var(--secundaria);
+  height: 30px;
+  border-radius: 4px;
+}
+form > #dados{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div#mandar-resetar{
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+}
+div#mandar-resetar input{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 70px;
+    background-color: var(--principal);
+    color: var(--white);
+    transition-duration: 0.3s;
+}
+div#mandar-resetar input:hover{
+    background-color: var(--secundaria);
+}
+fieldset#pizzas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div#total p{
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--contraste);
+    font-weight: bold;
+}
+   @media screen and (min-width:768px) {
+        main{
+            grid-template-columns: auto 60% 30% auto;
+            grid-template-rows: auto auto;
+            gap: 30px;
+        }
+        section#cardapio{
+            grid-column: 2/3;
+            grid-row: 1/2;;
+        }
+        section#encomendar{
+            grid-column:3/4;
+            grid-row:1/2;
+            height: 680px;
+            position: sticky;
+            top: 8px;
+            z-index: 1;
+        }
+        section#sobre-nos{
+            grid-column: 2/-2;
+            grid-row: 2/-1;
+        }
+}
