@@ -99,12 +99,51 @@
             </section>
 
             <section id="encomendar">
-                <form action="cadastro.js" method="get">
-                    <div>
-                        <label for="inome">Nome:</label>
-                        <input type="text" name="nome" id="inome">
+                <h2>Encomendar</h2>
+                <form action="cadastro.js" method="get" id="form">
+                    <fieldset class="dados">
+                        <legend class="legend">Seus dados</legend>
+                        <div class="form-div">
+                            <label for="inome">Nome:</label> <br>
+                            <input type="text" name="nome" id="inome" placeholder="Seu nome" required autocomplete="name">
+                        </div>
+                        <div class="form-div">
+                            <label for="inumero">Número:</label> <br>
+                            <input type="number" name="numero" id="inumero" placeholder=" 00 00000-0000" required autocomplete="cc-number" maxlength="11">
+                        </div>
+                        <div class="form-div">
+                            <label for="iendereco">Endereço:</label> <br>
+                            <input type="text" name="endereco" id="iendereco" placeholder="Bairro/rua/número" required autocomplete="address-level1">
+                        </div>
+                    </fieldset>
+                    <fieldset class="pizzas">
+                        <legend class="legend">Pizzas</legend>
+                        <div class="form-div">
+                            <input type="checkbox" name="carne" id="icarne">
+                            <label for="icarne"> Strogonoff de Carne</label>
+                        </div>
+                        <div class="form-div">
+                            <input type="checkbox" name="frango" id="ifrango">
+                            <label for="ifrango">Strogonoff de frango</label>
+                        </div>
+                        <div class="form-div">
+                            <input type="checkbox" name="pepperoni" id="ipepperoni">
+                            <label for="ipepperoni">Pepperoni</label>
+                        </div>
+                        <di class="form-div">
+                            <input type="checkbox" name="chocolate" id="ichocolate">
+                            <label for="ichocolate">Chocolate</label>
+                        </div>
+                        <div>
+                            <p>
+                                Total: <span>0</span>R$
+                            </p>
+                        </div>
+                    </fieldset>
+                    <div id="mandar-resetar">
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Pedir">
                     </div>
-                    <label for="inumero">Número</label>
                 </form>
             </section>
     </main>
