@@ -28,7 +28,7 @@ header#saudacoes{
         linear-gradient(
             rgba(0, 0, 0, 0.597),
             rgba(0, 0, 0, 0.597) ),
-        url('imagens/saudacao-background.jpg');
+        url('../imagens/saudacao-background.jpg');
     background-position: center center;
     background-size: cover;
     margin-bottom: 30px;
